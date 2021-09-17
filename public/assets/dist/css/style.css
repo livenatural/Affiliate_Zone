@@ -1,0 +1,14 @@
+.top-owner-bar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.bdtgyimg{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
