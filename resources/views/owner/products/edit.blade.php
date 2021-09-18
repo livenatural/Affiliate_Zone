@@ -48,6 +48,10 @@
                             <input type="number" class="form-control" name="price" id="exampleInputPassword89" placeholder="Product Price" value="{{ $product->PRICE }}">
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputPassword890">Product Link</label>
+                            <input type="text" class="form-control" name="link" id="exampleInputPassword890" placeholder="Product Link" value="{{ $product->LINK }}">
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputFile">Product Image*</label>
                             <div class="input-group">
                                 <div class="custom-file">
