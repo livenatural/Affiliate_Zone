@@ -36,6 +36,14 @@ Route::prefix('owner')->group(function () {
 
         //ALL OWNER ROUTES
         Route::get('dashboard', [DashboardController::class, 'OwnerDashboard']);
+        Route::prefix('owners')->group(function () {
+            Route::get('/', [UsersController::class, 'OwnerList']);
+            Route::get('{id}/delete', [UsersController::class, 'OwnerDelete']);
+        });
+        Route::prefix('new')->group(function () {
+            Route::get('/', [UsersController::class, 'AddNewOwner']);
+            Route::post('/', [UsersController::class, 'AddNewOwnerPost']);
+        });
         Route::prefix('products')->group(function () {
             Route::get('/', [ProductController::class, 'OwnerProductList']);
             Route::get('new', [ProductController::class, 'NewOwnerProduct']);

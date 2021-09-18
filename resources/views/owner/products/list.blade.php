@@ -52,6 +52,10 @@
                                         <a href="/owner/products/{{  $product->id }}/delete" class="btn btn-sm btn-danger">
                                             <i class="nav-icon fas fa-trash-alt"></i>Delete
                                         </a>
+                                        <a href="{{ $product->LINK }}" class="btn btn-sm btn-warning">
+                                            <i class="nav-icon ion ion-bag"></i>
+                                            Buy Now
+                                        </a>
                                     </div>
                                 </td>
                           </tr>

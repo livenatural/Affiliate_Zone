@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>Affiliate Zone</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -52,12 +52,12 @@
         <!-- Brand Logo -->
         <a href="/owner/dashboard" class="brand-link">
           <img src="{{ asset('/assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">AdminLTE 3</span>
+          <span class="brand-text font-weight-light">Affiliate Zone</span>
         </a>
       @else
         <a href="/" class="brand-link">
           <img src="{{ asset('/assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">AdminLTE 3</span>
+          <span class="brand-text font-weight-light">Affiliate Zone</span>
         </a>
       @endif
 
@@ -111,6 +111,29 @@
                     <a href="/owner/products/new" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>New Product</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="/owner/dashboard" class="nav-link">
+                  <i class="nav-icon fas fa-chart-pie"></i>
+                  <p>
+                    Owner
+                    <i class="nav-icon fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="/owner/owners" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Owner List</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/owner/new" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>New Owner</p>
                     </a>
                   </li>
                 </ul>

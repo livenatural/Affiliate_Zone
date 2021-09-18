@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('DESCRIPTION');
             $table->integer('PRICE')->default(0);
             $table->longText('IMAGE');
+            $table->longText('LINK');
             $table->timestamps();
         });
     }

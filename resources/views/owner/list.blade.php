@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
         <div class="col-sm-6">
-            <h1 class="m-0">Products</h1>
+            <h1 class="m-0">Dashboard</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,26 +28,23 @@
                     <thead>
                         <tr>
                           <th>ID</th>
-                          <th>PRODUCT IMG</th>
-                          <th>PRODUCT TITLE</th>
-                          <th>PRODUCT PRICE</th>
-                          <th>PRODUCT LINK</th>
+                          <th>NAME</th>
+                          <th>EMAIL</th>
+                          <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($owners as $owner)
                             <tr>
-                                <td>{{ $product->id }}</td>
+                                <td>{{ $owner->id }}</td>
+                                <td>{{ $owner->FULL_NAME }}</td>
+                                <td>{{ $owner->EMAIL_ADDRESS }}</td>
                                 <td>
-                                    <img class="bdtgyimg" src="{{ asset($product->IMAGE) }}" alt="">
-                                </td>
-                                <td>{{ $product->TITLE }}</td>
-                                <td>{{ $product->PRICE }}</td>
-                                <td>
-                                    <a href="{{ $product->LINK }}" class="btn btn-sm btn-warning">
-                                        <i class="nav-icon ion ion-bag"></i>
-                                        Buy Now
-                                    </a>
+                                    <div class="d-grid">
+                                        <a href="/owner/owners/{{  $owner->id }}/delete" class="btn btn-sm btn-danger">
+                                            <i class="nav-icon fas fa-trash-alt"></i>Delete
+                                        </a>
+                                    </div>
                                 </td>
                           </tr>
                         @endforeach
@@ -55,10 +52,9 @@
                     <tfoot>
                         <tr>
                             <th>ID</th>
-                            <th>PRODUCT IMG</th>
-                            <th>PRODUCT TITLE</th>
-                            <th>PRODUCT PRICE</th>
-                            <th>PRODUCT LINK</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>ACTION</th>
                         </tr>
                     </tfoot>
                 </table>

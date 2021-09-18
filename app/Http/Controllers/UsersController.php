@@ -19,4 +19,41 @@ class UsersController extends Controller
         DB::table('users')->where('id', $request->id)->update(['BlOCK' => $check->BLOCK ? false : true]);
         return redirect('/owner/users');
     }
+
+    public function AddNewOwner()
+    {
+        return view('owner.new');
+    }
+
+    public function AddNewOwnerPost(Request $request)
+    {
+        $name = $request->name;
+        $email = $request->email;
+        $password = $request->password;
+
+        $check = DB::table('owners')->where('EMAIL_ADDRESS', $email)->first();
+        if (!$check) {
+            DB::table('owners')->insert([
+                'FULL_NAME' => $name,
+                'EMAIL_ADDRESS' => $email,
+                'PASSWORD' => $password,
+                'created_at' => date('Y-m-d'),
+            ]);
+            return redirect('/owner/new')->with(['owner_status' => 'Owner Created']);
+        } else {
+            return redirect('/owner/new')->with(['owner_status' => 'Already Used This Email']);
+        }
+    }
+
+    public function OwnerList()
+    {
+        $db = DB::table('owners')->get();
+        return view('owner.list', ['owners' => $db]);
+    }
+
+    public function OwnerDelete(Request $request)
+    {
+        DB::table('owners')->where('id', $request->id)->delete();
+        return redirect('/owner/owners');
+    }
 }

@@ -24,6 +24,7 @@ class ProductController extends Controller
         $title = $request->title;
         $description = $request->description;
         $price = $request->price;
+        $link = $request->link;
 
         if ($request->hasFile('file')) {
             $path = Storage::putFile('uploads/', $request->file('file'));
@@ -33,6 +34,7 @@ class ProductController extends Controller
                     'DESCRIPTION' => $description,
                     'PRICE' => $price,
                     'IMAGE' => $path,
+                    'LINK' => $link,
                     'created_at' => date('Y-m-d'),
                 ]);
             } else {
@@ -41,6 +43,7 @@ class ProductController extends Controller
                     'DESCRIPTION' => $description,
                     'PRICE' => $price,
                     'IMAGE' => $path,
+                    'LINK' => $link,
                     'created_at' => date('Y-m-d'),
                 ]);
             }
@@ -52,6 +55,7 @@ class ProductController extends Controller
                     'DESCRIPTION' => $description,
                     'PRICE' => $price,
                     'IMAGE' => $path,
+                    'LINK' => $link,
                     'created_at' => date('Y-m-d'),
                 ]);
             } else {
