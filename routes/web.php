@@ -23,6 +23,7 @@ Route::prefix('/')->group(function () {
     Route::post('login', [LoginController::class, 'UserLoginPost']);
     Route::get('/', [ProductController::class, 'UserProducts']);
     Route::get('logout', [LogoutController::class, 'UserLogout']);
+    Route::get('product/{id}', [ProductController::class, 'UserSingleProduct']);
 });
 
 Route::prefix('owner')->group(function () {

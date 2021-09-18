@@ -40,3 +40,11 @@
 div.dataTables_wrapper div.dataTables_length label{
     margin: 0px!important;
 }
+.euro-sy{
+    font-weight: bold;
+    color: #007bff;
+}
+.pro-tyi{
+    width: 100%;
+    object-fit: cover;
+}

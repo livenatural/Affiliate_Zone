@@ -41,7 +41,7 @@
                                 <td>
                                     <img class="bdtgyimg" src="{{ asset($product->IMAGE) }}" alt="">
                                 </td>
-                                <td>{{ $product->TITLE }}</td>
+                                <td><a href="/product/{{ $product->id }}">{{ $product->TITLE }}</a></td>
                                 <td>{{ $product->PRICE }}</td>
                                 <td>
                                     <a href="{{ $product->LINK }}" class="btn btn-sm btn-warning">
