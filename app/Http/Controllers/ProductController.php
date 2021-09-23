@@ -86,12 +86,8 @@ class ProductController extends Controller
 
     public function UserProducts(Request $request)
     {
-        if ($request->session()->has('USER_LOGIN')) {
-            $db = DB::table('products')->get();
-            return view('user.products', ['products' => $db]);
-        } else {
-            return redirect('/login');
-        }
+        $db = DB::table('products')->get();
+        return view('user.products', ['products' => $db]);
     }
 
     public function UserSingleProduct(Request $request)

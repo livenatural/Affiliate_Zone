@@ -1,3 +1,17 @@
+.login-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0d9;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .top-owner-bar {
     position: fixed;
     top: 0px;
@@ -37,14 +51,14 @@
 .dataTables_paginate span a {
     cursor: pointer;
 }
-div.dataTables_wrapper div.dataTables_length label{
-    margin: 0px!important;
+div.dataTables_wrapper div.dataTables_length label {
+    margin: 0px !important;
 }
-.euro-sy{
+.euro-sy {
     font-weight: bold;
     color: #007bff;
 }
-.pro-tyi{
+.pro-tyi {
     width: 100%;
     object-fit: cover;
 }

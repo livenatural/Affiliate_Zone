@@ -1,6 +1,50 @@
 @extends('layout')
 @section('content')
 
+@if (!session()->has('USER_LOGIN'))
+    <!--Login Overlay Screen-->
+<div class="login-overlay">
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a href="/" class="h1"><b>User</b></a>
+            </div>
+            <div class="card-body">
+                <form action="/login" method="post">
+                    @csrf
+                    @if (session()->has('login_blocked'))
+                      <div class="input-group mb-3">
+                        <Button class="btn btn-danger btn-block">Account Blocked</Button>
+                      </div>
+                    @endif
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <span class="fas fa-envelope"></span>
+                        </div>
+                      </div>
+                      <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          I agree with <a href="#">Terms</a> & <a href="#">Conditions</a>
+                        </label>
+                    </div>
+                    <div class="social-auth-links text-center mt-2 mb-3">
+                      <Button type="submit" class="btn btn-block btn-primary">
+                         Continue
+                      </Button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Login Overlay Screen-->
+@endif
+
+
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">

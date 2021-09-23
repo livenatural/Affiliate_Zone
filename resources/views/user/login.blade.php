@@ -42,6 +42,12 @@
           </div>
           <input type="email" class="form-control" name="email" placeholder="Email">
         </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            I agree with <a href="#">Terms</a> & <a href="#">Conditions</a>
+          </label>
+        </div>
         <div class="social-auth-links text-center mt-2 mb-3">
           <Button type="submit" class="btn btn-block btn-primary">
              Continue
